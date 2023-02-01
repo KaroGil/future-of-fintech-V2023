@@ -15,23 +15,23 @@ const convertedData = data.map((item) => {
   };
 });
 
-export default function ChartDataFromFile() {
+export default function ChartDataFromFile() { //first graph
   return (
-    <div className={styles.container}>
-      <LineChart id="123" width={1000} height={400} data={convertedData}>
-        <XAxis dataKey="period">
-          <Label value="Period" offset={-5} position="insideBottom" />
-        </XAxis>
-        <YAxis
-          label={{
-            value: "Consumption (KWh)",
-            angle: -90,
-            position: "insideLeft",
-          }}
-        />
-        <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
-        <Line type="monotone" dataKey="consumption" stroke="#8884d8" />
-      </LineChart>
-    </div>
+      <div className={styles.container}>
+        <LineChart id="123" width={1000} height={400} data={convertedData}>
+          <XAxis dataKey="period">
+            <Label value="Period" offset={-5} position="insideBottom" />
+          </XAxis>
+          <YAxis
+            label={{
+              value: "Consumption1 (KWh)",
+              angle: -90,
+              position: "insideLeft",
+            }}
+          />
+          <CartesianGrid stroke="#ffbcd9" strokeDasharray="5 5" />
+          <Line type="monotone" dataKey="consumption" stroke="#de3163" />
+        </LineChart>
+      </div>
   );
 }

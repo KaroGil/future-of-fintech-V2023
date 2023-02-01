@@ -23,7 +23,7 @@ export default function ChartDataFromFile() {
       consumptionUnit: item.consumptionUnit,
     };
   });
-  return (
+  return (  //second graph
     <div className={styles.container}>
       <LineChart id="123" width={1000} height={400} data={convertedData}>
         <XAxis dataKey="period">

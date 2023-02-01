@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import { useState } from "react";
 import { Header } from "../components/Header";
 
 // We have to import the chart this way because it creates some errors if not.
@@ -18,11 +19,13 @@ const ChartDataFromAPI = dynamic(
 
 // This is the page that will be rendered at the root of your site.
 export default function Home() {
+  const [page, setPage] = useState(true);
+
   return (
     <main>
       <Header />
-      <ChartDataFromFile />
-      <ChartDataFromAPI />
+      {page ?  <ChartDataFromFile /> : <ChartDataFromAPI />}
+      <button onClick={() => setPage(!page)}>Click me to change</button>
     </main>
   );
 }

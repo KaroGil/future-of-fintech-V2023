@@ -1,6 +1,8 @@
 .header {
-  background-color: #ad362b;
-  color: #fff;
+  /* background-color: #2badab; */
+  background-image: linear-gradient(red, yellow);
+  /* color: #fff; */
+  color:black;
   padding: 20px;
   text-align: center;
 }
